@@ -20,7 +20,7 @@ commander
     .parse(process.argv)
 
 if(!process.argv[2]) {
-    console.log('Please add a option. Read ReadMe.txt for more information!');
+    console.log('Please add a option. Try -H to show the option list!');
     process.exit(1);
 }
 
