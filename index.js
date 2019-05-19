@@ -19,26 +19,26 @@ commander
     .option('-H, --showHelp', 'Shows help')
     .parse(process.argv)
 
-if(!process.argv[2]) {
+if (!process.argv[2]) {
     console.log('Please add a option. Try -H to show the option list!');
     process.exit(1);
 }
 
-if(commander.http) scraper('http');
-if(commander.sock) scraper('sock');
+if (commander.http) scraper('http');
+if (commander.sock) scraper('sock');
 
 if (commander.showHelp) commander.help();
 if (commander.showAuthor) console.log('Author: Julian | Discord: Julian ✞☿#7288');
 
-if(commander.remove) try {
-    if(existsSync('httpScraped.txt')) {
+if (commander.remove) try {
+    if (existsSync('httpScraped.txt')) {
         unlinkSync('httpScraped.txt');
         console.info('httpScraped.txt was successfully removed!');
     }
-    if(existsSync('sockScraped.txt')) {
+    if (existsSync('sockScraped.txt')) {
         unlinkSync('sockScraped.txt');
         console.info('sockScraped.txt was successfully removed!');
     }
-} catch(e) {
+} catch (e) {
     console.error(e);
 }
