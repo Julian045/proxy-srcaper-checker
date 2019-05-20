@@ -1,4 +1,4 @@
-# proxy-srcaper
+# proxy-srcaper-checker
 
 Run index.js as:
 
