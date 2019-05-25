@@ -22,7 +22,7 @@ function scraper(type) {
             if (err || req.statusCode !== 200) return;
             let proxies = body.toString().match(/\d{1,3}([.])\d{1,3}([.])\d{1,3}([.])\d{1,3}((:)|(\s)+)\d{1,8}/g);
             writeFileSync(outputFile, proxies);
-            console.log(`Proxies was successfuly scraped and added in ${outputFile}`);
+            console.log(`Proxies were successfuly scraped and added in ${outputFile}`);
         });
     });
 }
